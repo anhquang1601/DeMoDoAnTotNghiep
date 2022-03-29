@@ -19,6 +19,9 @@ const studentSchema=new Schema({
     masv:{
         type:String
     },
+    madoituong:{
+        type:String
+    },
     phongID:{
          type: Schema.Types.ObjectId, ref: 'room' ,
     },

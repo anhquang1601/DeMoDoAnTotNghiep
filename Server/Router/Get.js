@@ -4,7 +4,7 @@ const router=express.Router();
 const getPriority1=require("../Controller/Get"); */
 const middlewareController=require("../Controller/middlewareController")
 const getController= require("../Controller/Get")
-
+const roleId=require("../Controller/role")
 /* router.get('/',getpost); 
 router.get('/get',getPriority1); */
 router.get('/getStudent',getController.getStudent)

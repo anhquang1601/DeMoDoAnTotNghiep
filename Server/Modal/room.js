@@ -2,6 +2,7 @@
 const mongoose=require("mongoose");
 const Schema=mongoose.Schema
 const roomSchema=new Schema({
+    maloaiphong:String,
     maphong:String,
     tenphong:String,
     kinkroomID:{

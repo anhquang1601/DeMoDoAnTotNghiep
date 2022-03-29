@@ -24,8 +24,7 @@ router.post("/sigin",async(req,res)=>{
             })
         }
     }).catch(err=>{
-
-        res.status(400).json("no find username or password",err)
+        res.status(401).json("no find username or password",err)
     })
 })
     router.get("/getUser",async(req,res)=>{
@@ -56,7 +55,6 @@ router.post("/sigin",async(req,res)=>{
 
 router.get('/home',(req,res,next)=>{
     var token=req.cookies.token;
-    console.log("token",token)
     var decodeToken=jwt.verify(token,"mk");
     modelSigin.findById(decodeToken._id).then(data=>{
         console.log(data)
@@ -65,7 +63,6 @@ router.get('/home',(req,res,next)=>{
         res.json("loi")
     })
 },(req,res,next)=>{
-   /*  window.location.href("/login") */
    res.status(200).json("post Sigin Success !")
 })
 
